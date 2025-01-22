@@ -1,7 +1,10 @@
 import type { HttpContext } from '@adonisjs/core/http'
+import Todo from '#models/todo'
+import { inject } from '@adonisjs/core'
 
+@inject()
 export default class HomeController {
-  public async index({ view }: HttpContext) {
-    return view.render('pages/home')
+  async index({}: HttpContext) {
+    return 'Home page'
   }
 }

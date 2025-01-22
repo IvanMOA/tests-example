@@ -17,7 +17,7 @@ export default defineConfig({
   | Service providers
   |--------------------------------------------------------------------------
   |
-  | List of service providers to import and register when booting the
+  | List of services providers to import and register when booting the
   | application
   |
   */

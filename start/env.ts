@@ -1,10 +1,10 @@
 /*
 |--------------------------------------------------------------------------
-| Environment variables service
+| Environment variables services
 |--------------------------------------------------------------------------
 |
-| The `Env.create` method creates an instance of the Env service. The
-| service validates the environment variables and also cast values
+| The `Env.create` method creates an instance of the Env services. The
+| services validates the environment variables and also cast values
 | to JavaScript data types.
 |
 */

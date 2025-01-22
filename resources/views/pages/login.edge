@@ -10,11 +10,8 @@
 <body>
   <form method="POST" action="/login">
       {{ csrfField() }}
-      <div>
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email"  />
-         <small>Errores</small>
-      </div>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email"  />
       <label for="password">Password</label>
       <input type="password" name="password" id="password"  />
       <button type="submit">Login</button>
