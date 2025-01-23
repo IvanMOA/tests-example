@@ -3,18 +3,31 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> AdonisJS - A fully featured web framework for Node.js </title>
+  <title>AdonisJS - A fully featured web framework for Node.js</title>
 
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
   <form method="POST" action="/login">
-      {{ csrfField() }}
-      <label for="email">Email</label>
-      <input type="email" name="email" id="email"  />
-      <label for="password">Password</label>
-      <input type="password" name="password" id="password"  />
-      <button type="submit">Login</button>
+    {{ csrfField() }}
+    
+    @if (old('hasSubmitted') && (!old('email') || !old('password')))
+      <div style="
+      color: red;
+      font-size: 0.9rem;
+      margin-top: 10px;
+    " class="error-message">Por favor, llene todos los campos</div>
+    @endif
+
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" value="{{ old('email') || '' }}" />
+
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" value="{{ old('password') || '' }}" />
+
+    <input type="hidden" name="hasSubmitted" value="true" />
+
+    <button type="submit">Login</button>
   </form>
 </body>
 </html>
