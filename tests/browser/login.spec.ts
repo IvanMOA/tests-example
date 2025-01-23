@@ -27,7 +27,6 @@ test.group('login', (group) => {
     await emailInput.fill('jonathan@gmail.com')
     await passwordInput.fill('asdasd')
     await loginBtn.click()
-    await page.pause()
     await page.assertPath('/login')
   })
   test('login', async ({ visit }) => {
